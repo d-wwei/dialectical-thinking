@@ -3,18 +3,15 @@
 ## Quick install
 
 ```bash
-# 1. Copy cognitive protocol to Claude's config
-cp cognitive-protocol.md ~/.claude/dialectical-thinking.md
-
-# 2. Add reference in CLAUDE.md
-echo '@~/.claude/dialectical-thinking.md' >> ~/.claude/CLAUDE.md
+# 1. Inject core rules into CLAUDE.md (direct content injection — works on all versions)
+cat cognitive-protocol.md >> ~/.claude/CLAUDE.md
 ```
 
 ## What gets loaded where
 
 | File | Destination | Purpose |
 |---|---|---|
-| `cognitive-protocol.md` | `~/.claude/dialectical-thinking.md` | Always-on core rules (~30 lines) |
+| `cognitive-protocol.md` | `~/.claude/CLAUDE.md` (appended) | Always-on core rules (~30 lines) |
 | `SKILL.md` | `~/.claude/skills/dialectical-thinking/SKILL.md` | Full reference (loaded on demand) |
 | `anti-patterns.md` | `~/.claude/skills/dialectical-thinking/anti-patterns.md` | Detailed anti-pattern guide |
 | `examples.md` | `~/.claude/skills/dialectical-thinking/examples.md` | Before/after reference |
@@ -22,8 +19,8 @@ echo '@~/.claude/dialectical-thinking.md' >> ~/.claude/CLAUDE.md
 ## Full install (with skill files)
 
 ```bash
-# 1. Core rules
-cp cognitive-protocol.md ~/.claude/dialectical-thinking.md
+# 1. Core rules (inject directly into CLAUDE.md)
+cat cognitive-protocol.md >> ~/.claude/CLAUDE.md
 
 # 2. Skill files
 mkdir -p ~/.claude/skills/dialectical-thinking
@@ -31,8 +28,7 @@ cp SKILL.md ~/.claude/skills/dialectical-thinking/
 cp anti-patterns.md ~/.claude/skills/dialectical-thinking/
 cp examples.md ~/.claude/skills/dialectical-thinking/
 
-# 3. Register in CLAUDE.md
-echo '@~/.claude/dialectical-thinking.md' >> ~/.claude/CLAUDE.md
+# 3. (Core rules already injected in step 1)
 ```
 
 ## Verify
@@ -41,12 +37,11 @@ Ask Claude Code: "What are the dialectical thinking cognitive rules you're follo
 
 ## Stacking with other cognitive bases
 
-If `~/.claude/first-principles.md` or `~/.claude/systems-thinking.md` are already referenced in `CLAUDE.md`, no changes needed. All protocols load independently. First Principles governs what you reason FROM; Dialectical Thinking governs what you reason THROUGH; Systems Thinking governs what you reason WITHIN. No conflicts.
+If First Principles or Systems Thinking is already injected into `CLAUDE.md`, no changes needed. All protocols load independently. First Principles governs what you reason FROM; Dialectical Thinking governs what you reason THROUGH; Systems Thinking governs what you reason WITHIN. No conflicts.
 
 ## Uninstall
 
 ```bash
-rm ~/.claude/dialectical-thinking.md
+# Remove the Dialectical Thinking section from ~/.claude/CLAUDE.md (search for "# Dialectical Thinking — Cognitive Protocol" header)
 rm -rf ~/.claude/skills/dialectical-thinking
-# Remove the @~/.claude/dialectical-thinking.md line from ~/.claude/CLAUDE.md
 ```
