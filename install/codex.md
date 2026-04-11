@@ -1,5 +1,8 @@
 # Install — Codex
 
+> **Recommended**: Run `./install.sh --agent=codex-cli` from the repo root for automated installation.
+> The manual steps below are for reference or troubleshooting.
+
 ## Quick install
 
 ```bash

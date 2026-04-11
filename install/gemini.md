@@ -1,5 +1,8 @@
 # Install — Gemini
 
+> **Recommended**: Run `./install.sh --agent=gemini-cli` from the repo root for automated installation.
+> The manual steps below are for reference or troubleshooting.
+
 ## Quick install
 
 Paste the contents of `cognitive-protocol.md` into the `system_instruction` field of your Gemini API call or Google AI Studio system prompt.

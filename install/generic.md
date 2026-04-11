@@ -1,5 +1,8 @@
 # Install — Generic (Any Agent)
 
+> **Recommended**: Run `./install.sh` from the repo root for automated installation. Supports Claude Code, Gemini CLI, Codex CLI, Cursor, OpenCode, and OpenClaw.
+> The manual steps below are for reference or troubleshooting.
+
 ## Principle
 
 Dialectical Thinking is a cognitive protocol — a set of always-on reasoning rules. It works with any LLM agent by injecting `cognitive-protocol.md` (~30 lines) into the system prompt.
