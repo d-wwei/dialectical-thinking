@@ -1,3 +1,8 @@
+---
+name: 矛盾论
+description: "矛盾论——以毛泽东矛盾论为核心的辩证思维，识别主要矛盾，综合超越对立。"
+---
+
 # Dialectical Thinking (矛盾论)
 
 A cognitive base that shifts reasoning from seeking correct answers to identifying contradiction networks, locating the principal contradiction, and synthesizing beyond opposition.
