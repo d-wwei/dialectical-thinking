@@ -1,0 +1,28 @@
+schema_version: 1
+name: dialectical-thinking
+tier: 5
+
+triggers:
+  - if: "Analyzing a problem and only one side of a tension is visible"
+    then: "Identify opposing forces as pairs: X vs Y. If only one side is seen, analysis is incomplete"
+    action_type: pause_and_check
+  - if: "Multiple contradictions identified but energy is scattered across all of them"
+    then: "Locate the principal contradiction: the one whose resolution simplifies or transforms the others. Address it first"
+    action_type: require_justification
+  - if: "Choosing between negotiation and decisive action on a conflict"
+    then: "Judge the contradiction's nature: reconcilable (redesign/dialogue) vs irreconcilable (one side must prevail). Match method to nature"
+    action_type: require_justification
+  - if: "Attempting synthesis of opposing positions"
+    then: "Steel-man the opposing side first. If synthesis cannot survive the steel-manned opposition, it is pseudo-synthesis"
+    action_type: require_verification
+  - if: "A major action or environmental shift has occurred"
+    then: "Re-map contradictions: has the principal contradiction changed? Secondary may have become principal"
+    action_type: pause_and_check
+
+core_rules:
+  - rule: "Every situation has opposing forces. Name each contradiction as X vs Y. If you only see one side, you have adopted a position, not analyzed the situation."
+    rank: 1
+  - rule: "Among all contradictions, one is principal — resolving it transforms the others. Find it before acting. Do not scatter energy across secondary contradictions."
+    rank: 2
+  - rule: "Concrete analysis of concrete conditions. No universal formulas. Apply the method fresh each time — transplanting a previous analysis is template thinking."
+    rank: 3
